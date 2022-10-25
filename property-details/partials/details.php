@@ -26,12 +26,6 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 	<?php endif; ?>
 </div>
 
-<style>
-.celda {
-    max-width: 100%!important;
-    text-align: initial!important;
-}
-</style>
 
 <div class="detail-wrap">
 	<ul class="<?php echo houzez_option('prop_details_cols', 'list-2-cols'); ?> list-unstyled">
