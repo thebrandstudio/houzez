@@ -17,21 +17,17 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 
 
 <div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 30px 0!important;">
-
-
 	<?php if(have_rows('caracteristicas_de_la_nave')): ?>
 		<?php while( have_rows('caracteristicas_de_la_nave')): the_row(); ?>
-			<?php the_sub_field('texto'); ?>
-			<?php the_sub_field('valor'); ?>
+			<ul class="list-2-cols list-unstyled">
+				<li><strong><?php the_sub_field('texto'); ?>:</strong><span><?php the_sub_field('valor'); ?></span></li>
 		<?php endwhile; ?>
 	<?php endif; ?>
-
-
 </div>
 
 
 
-<div id="detalles" class="detail-wrap">
+<div class="detail-wrap">
 	<ul class="<?php echo houzez_option('prop_details_cols', 'list-2-cols'); ?> list-unstyled">
 		<?php
         if( !empty( $prop_id ) && $hide_fields['prop_id'] != 1 ) {
