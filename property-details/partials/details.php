@@ -16,17 +16,6 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 ?>
 
 
-<div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 0px 0 10px 0!important;">
-	<?php if(have_rows('extra')): ?>
-		<ul class="list-2-cols list-unstyled">
-			<?php while( have_rows('extra')): the_row(); ?>
-					<li><strong><?php the_sub_field('texto'); ?>:</strong><span class="celda"><?php the_sub_field('valor'); ?></span></li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
-</div>
-
-
 <div class="detail-wrap">
 	<ul class="<?php echo houzez_option('prop_details_cols', 'list-2-cols'); ?> list-unstyled">
 		<?php
@@ -158,6 +147,22 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
         ?>
 	</ul>
 </div>
+
+
+
+
+<div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 0px 0 10px 0!important;">
+	<?php if(have_rows('extra')): ?>
+		<ul class="list-2-cols list-unstyled">
+			<?php while( have_rows('extra')): the_row(); ?>
+					<li><strong><?php the_sub_field('texto'); ?>:</strong><span class="celda"><?php the_sub_field('valor'); ?></span></li>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+</div>
+
+
+
 
 <?php if( !empty( $additional_features[0]['fave_additional_feature_title'] ) && $hide_fields['additional_details'] != 1 ) { ?>
 	<div class="block-title-wrap">
