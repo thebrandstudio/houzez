@@ -17,13 +17,15 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 
 
 <div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 30px 0!important;">
-	PRUEBA
-	<?php if( have_rows('caracteristicas_de_la_nave', 'option') ): ?>
-	<ul>
-	<?php while( have_rows('caracteristicas_de_la_nave', 'option') ): the_row(); ?>
-	    <li><?php the_sub_field('texto'); ?></li>
-	<?php endwhile; ?>
-	</ul>
+
+
+	<?php if(have_rows('caracteristicas_de_la_nave')): ?>
+		<?php while( have_rows('caracteristicas_de_la_nave')): the_row(); ?>
+			<?php the_sub_field('texto'); ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	
+
 </div>
 
 
