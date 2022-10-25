@@ -27,8 +27,8 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 
 <style>
 .celda {
-    max-width: 100%;
-    text-align: initial;
+    max-width: 100%!important;
+    text-align: initial!important;
 }
 </style>
 
