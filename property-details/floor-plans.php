@@ -4,7 +4,7 @@ global $post, $ele_settings;
 $section_title = isset($ele_settings['section_title']) && !empty($ele_settings['section_title']) ? $ele_settings['section_title'] : houzez_option('sps_floor_plans', 'Floor Plans');
 
 $show_header = isset($ele_settings['section_header']) ? $ele_settings['section_header'] : true;
-$default_open = isset($ele_settings['show_open']) && $ele_settings['show_open'] == 'false' ? 'show' : '';
+$default_open = isset($ele_settings['show_open']) && $ele_settings['show_open'] == 'true' ? 'show' : '';
 
 
 $floor_plans = get_post_meta( get_the_ID(), 'floor_plans', true );
@@ -38,7 +38,7 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 	            ?>
 
 				<div class="accordion-tab floor-plan-wrap">
-					<div class="accordion-header" data-toggle="collapse" data-target="#floor-<?php echo esc_attr($i); ?>" aria-expanded="false">
+					<div class="accordion-header" data-toggle="collapse" data-target="#floor-<?php echo esc_attr($i); ?>" aria-expanded="true">
 						<div class="d-flex align-items-center" id="floor-plans-<?php echo esc_attr($i); ?>">
 							<div class="accordion-title flex-grow-1">
 								<?php echo esc_attr( $plan_title ); ?>
