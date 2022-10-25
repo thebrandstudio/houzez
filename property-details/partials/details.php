@@ -14,6 +14,14 @@ $property_type = houzez_taxonomy_simple('property_type');
 $garage_size = houzez_get_listing_data('property_garage_size');
 $additional_features = get_post_meta( get_the_ID(), 'additional_features', true);
 ?>
+
+
+<div id="detalles" class="detail-wrap">
+	PRUEBA
+</div>
+
+
+
 <div id="detalles" class="detail-wrap">
 	<ul class="<?php echo houzez_option('prop_details_cols', 'list-2-cols'); ?> list-unstyled">
 		<?php
