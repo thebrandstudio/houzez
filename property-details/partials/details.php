@@ -20,12 +20,17 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 	<?php if(have_rows('caracteristicas_de_la_nave')): ?>
 		<?php while( have_rows('caracteristicas_de_la_nave')): the_row(); ?>
 			<ul class="list-2-cols list-unstyled">
-				<li><strong><?php the_sub_field('texto'); ?>:</strong><span><?php the_sub_field('valor'); ?></span></li>
+				<li><strong><?php the_sub_field('texto'); ?>:</strong><span class="celda"><?php the_sub_field('valor'); ?></span></li>
 		<?php endwhile; ?>
 	<?php endif; ?>
 </div>
 
-
+<style>
+.celda {
+    max-width: 100%;
+    text-align: initial;
+}
+</style>
 
 <div class="detail-wrap">
 	<ul class="<?php echo houzez_option('prop_details_cols', 'list-2-cols'); ?> list-unstyled">
