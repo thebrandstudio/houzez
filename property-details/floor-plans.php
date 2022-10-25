@@ -22,7 +22,7 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 
 		<div class="block-content-wrap">
 			<div class="accordion">
-				<?php 
+				<?php
 				$i = 0;
 				foreach( $floor_plans as $plan ):
 					$i++;
@@ -36,9 +36,9 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 
 		            $plan_title = isset($plan['fave_plan_title']) ? esc_attr($plan['fave_plan_title']) : '';
 	            ?>
-				
+
 				<div class="accordion-tab floor-plan-wrap">
-					<div class="accordion-header" data-toggle="collapse" data-target="#floor-<?php echo esc_attr($i); ?>" aria-expanded="false">
+					<div class="accordion-header" data-toggle="collapse" data-target="#floor-<?php echo esc_attr($i); ?>" aria-expanded="true">
 						<div class="d-flex align-items-center" id="floor-plans-<?php echo esc_attr($i); ?>">
 							<div class="accordion-title flex-grow-1">
 								<?php echo esc_attr( $plan_title ); ?>
@@ -46,7 +46,7 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 							<ul class="floor-information list-unstyled list-inline">
 								<?php if( isset($plan['fave_plan_size']) && !empty( $plan['fave_plan_size'] ) ) { ?>
 			                        <li class="list-inline-item fp-size">
-			                            <?php esc_html_e( 'Size', 'houzez' ); ?>: 
+			                            <?php esc_html_e( 'Size', 'houzez' ); ?>:
 			                            <strong> <?php echo esc_attr( $plan['fave_plan_size'] ); ?></strong>
 			                        </li>
 			                    <?php } ?>
@@ -67,7 +67,7 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 
 			                    <?php if( isset($plan['fave_plan_price']) && !empty( $plan['fave_plan_price'] ) ) { ?>
 			                        <li class="list-inline-item fp-price">
-			                        	<?php echo houzez_option('spl_price', 'Price'); ?>: 
+			                        	<?php echo houzez_option('spl_price', 'Price'); ?>:
 			                        	<strong><?php echo houzez_get_property_price( $plan['fave_plan_price'] ).$price_postfix; ?></strong>
 			                        </li>
 			                    <?php } ?>
@@ -77,29 +77,29 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 					<div id="floor-<?php echo esc_attr($i); ?>" class="collapse <?php echo esc_attr($default_open); ?>" data-parent="#floor-plans-<?php echo esc_attr($i); ?>">
 						<div class="accordion-body">
 							<?php if( !empty( $plan_image ) ) { ?>
-                    
+
 			                        <?php if($filetype['ext'] != 'pdf' ) {?>
 			                        <a href="<?php echo esc_url( $plan['fave_plan_image'] ); ?>" data-lightbox="roadtrip">
 			                            <img class="img-fluid" src="<?php echo esc_url( $plan['fave_plan_image'] ); ?>" alt="image">
 			                        </a>
-			                        <?php } else { 
-			                            
+			                        <?php } else {
+
 			                            $path = $plan_image;
-			                            $file = basename($path); 
+			                            $file = basename($path);
 			                            $file = basename($path, ".pdf");
 			                            echo '<a href="'.esc_url( $plan_image ).'" download>';
 			                            echo $file;
 			                            echo '</a>';
 			                        } ?>
-			                    
+
 			                <?php } ?>
-							
+
 							<div class="floor-plan-description">
 								<p><strong><?php echo esc_html__('Description', 'houzez'); ?>:</strong><br>
-									<?php 
-									if( isset($plan['fave_plan_description']) && !empty( $plan['fave_plan_description'] ) ) { 
-										echo wp_kses_post( $plan['fave_plan_description'] ); 
-									} 
+									<?php
+									if( isset($plan['fave_plan_description']) && !empty( $plan['fave_plan_description'] ) ) {
+										echo wp_kses_post( $plan['fave_plan_description'] );
+									}
 									?>
 								</p>
 							</div><!-- floor-plan-description -->
