@@ -95,7 +95,6 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 			                <?php } ?>
 
 							<div class="floor-plan-description">
-								<p><strong><?php echo esc_html__('Description', 'houzez'); ?>:</strong><br>
 									<?php
 									if( isset($plan['fave_plan_description']) && !empty( $plan['fave_plan_description'] ) ) {
 										echo wp_kses_post( $plan['fave_plan_description'] );
