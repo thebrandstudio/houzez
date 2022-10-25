@@ -16,7 +16,7 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 ?>
 
 
-<div id="detalles" class="detail-wrap">
+<div id="detalles" class="detail-wrap" style="background-color: transparent; border-color: transparent;">
 	PRUEBA
 </div>
 
