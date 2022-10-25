@@ -74,7 +74,7 @@ if( isset($floor_plans[0]['fave_plan_title']) && !empty( $floor_plans[0]['fave_p
 							</ul>
 						</div><!-- d-flex -->
 					</div><!-- accordion-header -->
-					<div id="floor-<?php echo esc_attr($i); ?>" class="collapse <?php echo esc_attr($default_open); ?>" data-parent="#floor-plans-<?php echo esc_attr($i); ?>">
+					<div id="floor-<?php echo esc_attr($i); ?>" class="collapse show" data-parent="#floor-plans-<?php echo esc_attr($i); ?>">
 						<div class="accordion-body">
 							<?php if( !empty( $plan_image ) ) { ?>
 
