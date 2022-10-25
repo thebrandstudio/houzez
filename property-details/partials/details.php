@@ -148,7 +148,12 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 	</ul>
 </div>
 
-
+<div class="block-title-wrap d-flex justify-content-between align-items-center">
+	<h2><?php echo houzez_option('sps_details', 'Details'); ?></h2>
+	<?php if( $hide_fields['updated_date'] != 1 ) { ?>
+	<span class="small-text grey"><i class="houzez-icon icon-calendar-3 mr-1"></i> <?php esc_html_e( 'Updated on', 'houzez' ); ?> <?php the_modified_time('F j, Y'); ?> <?php esc_html_e( 'at', 'houzez' ); ?> <?php the_modified_time('g:i a'); ?></span>
+	<?php } ?>
+</div><!-- block-title-wrap -->
 
 
 <div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 0px 0 10px 0!important;">
