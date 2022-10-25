@@ -22,9 +22,10 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 	<?php if(have_rows('caracteristicas_de_la_nave')): ?>
 		<?php while( have_rows('caracteristicas_de_la_nave')): the_row(); ?>
 			<?php the_sub_field('texto'); ?>
+			<?php the_sub_field('valor'); ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
-	
+
 
 </div>
 
