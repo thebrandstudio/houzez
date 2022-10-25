@@ -16,7 +16,7 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 ?>
 
 
-<div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 30px 0!important;">
+<div id="detalles" class="detail-wrap" style="background-color: transparent!important; border-color: transparent!important; padding: 0px 0!important;">
 	<?php if(have_rows('extra')): ?>
 		<ul class="list-2-cols list-unstyled">
 			<?php while( have_rows('extra')): the_row(); ?>
