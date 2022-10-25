@@ -21,6 +21,7 @@ $additional_features = get_post_meta( get_the_ID(), 'additional_features', true)
 		<?php while( have_rows('extra')): the_row(); ?>
 			<ul class="list-2-cols list-unstyled">
 				<li><strong><?php the_sub_field('texto'); ?>:</strong><span class="celda"><?php the_sub_field('valor'); ?></span></li>
+			</ul>
 		<?php endwhile; ?>
 	<?php endif; ?>
 </div>
