@@ -8,8 +8,12 @@
 			<?php } ?>
 		</div><!-- block-title-wrap -->
 		<div class="block-content-wrap">
-			PRUEBA
 			<?php get_template_part('property-details/partials/details'); ?>
 		</div><!-- block-content-wrap -->
+
+		<div class="block-content-wrap">
+			PRUEBA
+		</div><!-- block-content-wrap -->
+
 	</div><!-- block-wrap -->
 </div><!-- property-detail-wrap -->
